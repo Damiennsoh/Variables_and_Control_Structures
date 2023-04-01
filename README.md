@@ -8,8 +8,9 @@ This application takes user inputs from the commandline and prints them out as o
 ## User_Story:
 * ![image](https://github.com/Damiennsoh/Variables_and_Control_Structures/blob/main/Screenshots/user_story_capstone_proj.jpg)
 
-## Usage: The usage of this application is to calculate both simple and compound interest based on the user inputs as the program prompts for inputs.
-It's usage or operation is similar to the docummentation of the Installation section.
+## Usage: 
+*The usage of this application is to calculate both simple and compound interest based on the user inputs as the program prompts for inputs.
+*It's usage or operation is similar to the docummentation of the Installation section.
 
 ## Credits:
 * All thanks to Hyperiond Development Bootcamp team for taking their time to explain programming students to us their students. We are grateful
@@ -22,3 +23,4 @@ It's usage or operation is similar to the docummentation of the Installation sec
 ![image](https://github.com/Damiennsoh/Variables_and_Control_Structures/blob/main/Screenshots/Capstone_output2.jpg)
 
 * output:
+* ![image](https://github.com/Damiennsoh/Variables_and_Control_Structures/blob/main/Screenshots/Capstone_outp1.jpg)

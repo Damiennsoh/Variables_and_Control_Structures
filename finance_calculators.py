@@ -12,12 +12,12 @@ deposit_amount = None # This means that under the choices of both investment and
 interest_Rate = None
 investment_years = None
 
-calculation_type_Choice = input("Enter either 'investment' or 'bond' from the menu above to proceed: ").lower() # converts input to lowercase.
-if len(calculation_type_Choice) < 1: # If no input is entered an error message will be displayed.
+calculation_type_choice = input("Enter either 'investment' or 'bond' from the menu above to proceed: ").lower() # converts input to lowercase.
+if len(calculation_type_choice) < 1: # If no input is entered an error message will be displayed.
     print("You did not make a choice! please make a choice to proceed.")
-elif calculation_type_Choice != "investment" and calculation_type_Choice != "bond": # If neither investment nor bond is entered, an error message will be displayed.
+elif calculation_type_choice != "investment" and calculation_type_choice != "bond": # If neither investment nor bond is entered, an error message will be displayed.
     print("Invalid input! Enter the right options to proceed: ")
-elif calculation_type_Choice == "investment":
+elif calculation_type_choice == "investment":
     deposit_amount = int(input("What amount are you depositing: ")) # int is placed in front of the  input before the parenthesis to convert any string into an integer
     print("Deposit amount is:", deposit_amount)
    
@@ -37,11 +37,11 @@ elif calculation_type_Choice == "investment":
     elif interest_type != "simple" and interest_type != "compound": # Using an elif statement to create a condition so that if neither simple nor compound is entered, user is requested to enter the right input to continue
        print("Enter the right option to proceed: ")
     elif interest_type == "compound":
-        compound__IR= interest_rate/100
+        compound__IR= interest_rate/100 # Where compound_IR = compound interest rate
         compound_interest = deposit_amount*math.pow((1+compound__IR), investment_years)
         print("The total amount if compound interest is applied is =", round(compound_interest, 2)) # round is used to convert the decimals into 2 decimal places
 
-elif calculation_type_Choice == "bond": # if user decides to chose bond, the below code under the elif block will execute
+elif calculation_type_choice == "bond": # if user decides to chose bond, the below code under the elif block will execute
     present_value = int(input("Enter the present value of the house: "))
     print("The present value of the house =", present_value)
 
@@ -55,6 +55,8 @@ elif calculation_type_Choice == "bond": # if user decides to chose bond, the bel
     monthly_IR = annual_IR/12 # since there are 12 months in a year
     monthly_repayments = (monthly_IR*present_value) / (1-(1+monthly_IR)**(-number_months)) # Formula for calculating bond repayments
     print("Amount user will have to repay each month =", monthly_repayments)
+else:
+    print("Start the whole process again")
 
 
 

@@ -13,7 +13,7 @@ This application takes user inputs from the command line and prints them out as 
 * It's usage or operation is similar to the documentation of the Installation section.
 
 ## Credits:
-* All thanks to Hyperiond Development Bootcamp team for taking their time to explain programming students to us their students. We are grateful
+* All thanks to Hyperiond Development Bootcamp team for taking their time to explain programming to us their students. We are grateful
 
 ## Licences:
 * Kindly refer to the MIT license code within the root of this repository

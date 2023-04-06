@@ -23,13 +23,13 @@ elif calculation_type_Choice == "investment":
     deposit_amount = int(input("What amount are you depositing: ")) # int is placed in front of the  input before the parenthesis to convert any string into an integer
     print("Deposit amount is:", deposit_amount)
    
-    interest_Rate = int(input("What interest rate do you want?: ")) 
-    print("Interest rate is:", interest_Rate)
-   
+    interest_rate = int(input("What interest rate do you want?: ")) 
+    print("Interest rate is:", interest_rate)
+
     investment_years = int(input("How many years do you plan on investing?: "))
     print("Investment years is:", investment_years)
 
-    simple_interest = (deposit_amount*interest_Rate*investment_years)/100
+    simple_interest = (deposit_amount*interest_rate*investment_years)/100
     total_simple_interest_amount = deposit_amount + simple_interest # Adding the simple interest amount to the principal or initial amount invested
     
     interest_type = input("Choose between simple interest or compound interest: ").lower() # Declaring a variable for type of interest
@@ -39,21 +39,20 @@ elif calculation_type_Choice == "investment":
     elif interest_type != "simple" and interest_type != "compound": # Using an elif statement to create a condition so that if neither simple nor compound is entered, user is requested to enter the right input to continue
        print("Enter the right option to proceed: ")
 
-
 elif calculation_type_Choice == "bond": # if user decides to chose bond, the below code under the elif block will execute
-    Present_value = int(input("Enter the present value of the house: "))
-    print("The present value of the house =", Present_value)
+    present_value = int(input("Enter the present value of the house: "))
+    print("The present value of the house =", present_value)
 
-    interest_Rate = int(input("What is your interest rate?: ")) # Asking for interest rate under bond calculation_type_choice
-    print("The interest rate is =", interest_Rate)
+    interest_rate = int(input("What is your interest rate?: ")) # Asking for interest rate under bond calculation_type_choice
+    print("The interest rate is =", interest_rate)
 
-    Number_months = int(input("Enter the number of months you will take to repay the bond: "))
-    print("Number of months it will take to repay the bond is =", Number_months)
+    number_months = int(input("Enter the number of months you will take to repay the bond: "))
+    print("Number of months it will take to repay the bond is =", number_months)
 
-    Annual_IR = interest_Rate/100 # since rates are in percentages, it means over 100
-    monthly_IR = Annual_IR/12 # since there are 12 months in a year
-    monthly_Repayments = (monthly_IR*Present_value) / (1-(1+monthly_IR)**(-Number_months)) # Formula for calculating bond repayments
-    print("Amount user will have to repay each month =", monthly_Repayments)
+    annual_IR = interest_rate/100 # since rates are in percentages, it means over 100
+    monthly_IR = annual_IR/12 # since there are 12 months in a year
+    monthly_repayments = (monthly_IR*present_value) / (1-(1+monthly_IR)**(-number_months)) # Formula for calculating bond repayments
+    print("Amount user will have to repay each month =", monthly_repayments)
 
 
 

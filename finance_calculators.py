@@ -13,12 +13,10 @@ interest_Rate = None
 investment_years = None
 
 calculation_type_Choice = input("Enter either 'investment' or 'bond' from the menu above to proceed: ").lower() # converts input to lowercase.
-
 if len(calculation_type_Choice) < 1: # If no input is entered an error message will be displayed.
     print("You did not make a choice! please make a choice to proceed.")
 elif calculation_type_Choice != "investment" and calculation_type_Choice != "bond": # If neither investment nor bond is entered, an error message will be displayed.
     print("Invalid input! Enter the right options to proceed: ")
-
 elif calculation_type_Choice == "investment":
     deposit_amount = int(input("What amount are you depositing: ")) # int is placed in front of the  input before the parenthesis to convert any string into an integer
     print("Deposit amount is:", deposit_amount)
@@ -32,12 +30,16 @@ elif calculation_type_Choice == "investment":
     simple_interest = (deposit_amount*interest_rate*investment_years)/100
     total_simple_interest_amount = deposit_amount + simple_interest # Adding the simple interest amount to the principal or initial amount invested
     
-    interest_type = input("Choose between simple interest or compound interest: ").lower() # Declaring a variable for type of interest
+    interest_type = input("Choose between simple or compound: ").lower() # Declaring a variable for type of interest
     if interest_type == "simple":
        print("Simple interest =", simple_interest)
        print("Total amount=",total_simple_interest_amount )  
     elif interest_type != "simple" and interest_type != "compound": # Using an elif statement to create a condition so that if neither simple nor compound is entered, user is requested to enter the right input to continue
        print("Enter the right option to proceed: ")
+    elif interest_type == "compound":
+        compound__IR= interest_rate/100
+        compound_interest = deposit_amount*math.pow((1+compound__IR), investment_years)
+        print("The total amount if compound interest is applied is =", round(compound_interest, 2)) # round is used to convert the decimals into 2 decimal places
 
 elif calculation_type_Choice == "bond": # if user decides to chose bond, the below code under the elif block will execute
     present_value = int(input("Enter the present value of the house: "))
